@@ -21,7 +21,65 @@ h2 {
 }
 
 p {
+  font-size: 1.3em;
   font-weight: 300;
+}
+
+.line {
+  height: 3px;
+  background-color: #ddd;
+  width: 60%;
+  content: '';
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
+.chapter-number {
+  padding: 2em 0 2em;
+}
+
+.explanation {
+  border-left: 3px red solid;
+  padding-left: 1em;
+  font-size: 1.2em;
+}
+
+.fr {
+  font-weight: 400;
+}
+
+.instruction {
+  text-align: left;
+  line-height: 1.8em;
+  background-color: #BDE5F8;
+  padding: 1em;
+  border-radius: 10px;
+  font-size: 14px;
+  position: relative;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.instruction .instruct-bar p {
+  font-weight: 400;
+  text-align: center;
+}
+
+.instruction .instruct-bar span {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.picture {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 #intro {
@@ -41,20 +99,13 @@ p {
 
 #intro p {
   margin: 0;
-  font-size: 1.3em;
   padding: 1em 0 .5em;
 }
 
-#intro::after {
-  height: 3px;
-  background-color: #ddd;
-  width: 40%;
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 30%;
-}
-
-.chapter-number {
-  padding: 3em 0 2em;
+#container {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 2.3em;
+  text-align: left;
 }

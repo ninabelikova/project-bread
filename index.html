@@ -3,8 +3,14 @@
   <meta charset="utf-8">
   <title>Project Bread</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+  <script src="app.js"></script>
 </head>
-<body>
+
+<body ng-app="app">
+
+  <!-- Intro -->
+
   <div id="intro">
     <h1>The Tomato Way</h1>
     <p>
@@ -13,9 +19,185 @@
     <img src="tomato.jpg">
   </div>
 
+  <div class="line">
+  </div>
+
+  <!-- First Chapter -->
+
   <div class="chapter-number">
     <h2>Premier Chapitre</h2>
   </div>
+
+
+  <div id="container" ng-controller="ContainerControl"  ng-init="showHint=true;showHint2=true">
+
+    <div class="instruction" ng-show="showHint">
+      <div class="instruct-bar">
+        <p>Hints<span ng-click="showHint=false">X</span></p>
+      </div>
+      <p>
+        <span class="fr">Bold</span> - original text
+        <br>Normal - English translation (as literal as possible)<br>
+        <em>Italic</em> - Literal translation (or grammar explanation)<br>
+        <p>Don't try to memorize every word, the goal here is to get as much comprehensible input as possible in a short time. Try to understand each sentence and move on.</p>
+      </p>
+    </div>
+
+    <!-- First Paragraph -->
+
+    <p class="explanation">
+      <span class="fr">Lorsque j'avais six ans j'ai vu, une fois</span> <br> When I was 6 <em>(had 6 years)</em> I've seen, once <em>(one time)</em>
+    </p>
+
+    <p class="explanation">
+      <span class="fr">une magnifique image</span> <br> a magnificent picture
+    </p>
+
+    <p class="explanation">
+      <span class="fr">dans un livre sur la Forêt Vierge qui s'appelait "Histoires Vécues"</span> <br>in a book about <em>(on)</em> the primeval <em>(virgin)</em> forest which is called (called herself) "True stories" <em>(Stories Lived)</em>
+    </p>
+
+    <p class="explanation">
+      <span class="fr">Ça représentait un serpent boa qui avalait un fauve</span> <br> It represented a boa constrictor who was swallowing a tiger
+    </p>
+
+    <p class="explanation">
+      <span class="fr">Voilà la copie du dessin</span> <br> Here's a copy of the drawing
+    </p>
+
+    <div class="line"></div>
+
+    <div class="instruction" ng-show="showHint2">
+      <div class="instruct-bar">
+        <p>Hints<span ng-click="showHint2=false">X</span></p>
+      </div>
+      <p>
+        Now here's the entire paragraph! If you forget the meaning of a word or a sentence, just scroll back.
+      </p>
+    </div>
+
+    <p class="original-text">
+      Lorsque j'avais six ans j'ai vu, une fois, une magnifique image, dans un livre sur la Forêt Vierge qui s'appelait "Histoires Vécues". Ça représentait un serpent boa qui avalait un fauve. Voilà la copie du dessin.
+    </p>
+
+    <img class="picture" src="boa.jpg">
+
+    <div class="line"></div>
+
+    <!-- Second Paragraph -->
+
+    <p class="explanation">
+      <span class="fr">On disait dans le livre</span>
+      <br>In the book it said <em>(we said in the book)</em>
+    </p>
+
+    <p class="explanation">
+      <span class="fr">Les serpents boas avalent leur proie tout entière, sans la mâcher</span>
+      <br>The boa constrictors swallow their prey whole <em>(all entire)</em>, without chewing it <em>(without it chewing)</em>
+    </p>
+
+    <p class="explanation">
+      <span class="fr">Ensuite ils ne peuvent plus bouger</span>
+      <br>Then they can no longer move
+    </p>
+
+    <p class="explanation">
+      <span class="fr">et ils dorment pendant les six mois de leur digestion</span>
+      <br>and they sleep through <em>(during)</em> the 6 months of their digestion
+    </p>
+
+    <p class="explanation">
+      <span class="fr">J'ai alors beaucoup réfléchi sur les aventures de la jungle</span>
+      <br>I've pondered deeply, then, over <em>(I have then much thought on)</em> the adventures of the jungle
+    </p>
+
+    <p class="explanation">
+      <span class="fr">et, à mon tour, j'ai réussi, avec un crayon de couleur, à tracer mon premier dessin</span>
+      <br>and, <em>(at my turn)</em> I've succeeded, with a colored pencil, in making my first drawing
+    </p>
+
+    <p class="explanation">
+      <span class="fr">Mon dessin numéro 1. Il était comme ça</span>
+      <br>My first drawing. It was like this
+    </p>
+
+    <div class="line">
+
+    </div>
+
+    <p class="original-text">
+      On disait dans le livre: "Les serpents boas avalent leur proie tout entière, sans la mâcher. Ensuite ils ne peuvent plus bouger et ils dorment pendant les six mois de leur digestion".
+    </p><p class="original-text">
+      J'ai alors beaucoup réfléchi sur les aventures de la jungle et, à mon tour, j'ai réussi, avec un crayon de couleur, à tracer mon premier dessin. Mon dessin numéro 1. Il était comme ça:
+    </p>
+
+    <img src="boa-full.jpg" class="picture">
+
+    <div class="line"></div>
+
+    <!-- 3rd Paragraph -->
+
+    <p class="explanation">
+      <span class="fr">J'ai montré mon chef d'oeuvre aux grandes personnes</span>
+      <br>I've showed my masterpiece to the grown-ups <em>(big people)</em>
+    </p>
+
+    <p class="explanation">
+      <span class="fr">Elles m'ont répondu : "Pourquoi un chapeau ferait-il peur ?"</span>
+      <br>They answered <em>(they have me responded)</em> : Why would anyone be frightened by a hat? <em>(why would a hat make fear)</em>
+    </p>
+
+    <p class="explanation">
+      <span class="fr">Mon dessin ne représentait pas un chapeau</span>
+      <br>My drawing didn't represent a hat
+    </p>
+
+    <p class="explanation">
+      <span class="fr">Il représentait un serpent boa qui digérait un éléphant</span>
+      <br>It represented a boa constrictor who was digesting an elephant
+    </p>
+
+    <p class="explanation">
+      <span class="fr">J'ai alors dessiné l'intérieur du serpent boa</span>
+      <br>I then drawed the inside of the boa constrictor
+    </p>
+
+    <p class="explanation">
+      <span class="fr">afin que les grandes personnes puissent comprendre</span>
+      <br>so that the grown-ups can <em>(subjunctive of "pouvoir", used due to "afin que")</em> understand
+    </p>
+
+    <p class="explanation">
+      <span class="fr">Elles ont toujours besoin d'explications</span>
+      <br>They still need the explanations <em>(they have still need of explanations)</em>
+    </p>
+
+    <p class="explanation">
+      <span class="fr">Mon dessin numéro 2 était comme ça</span>
+      <br>My second drawing was like this
+    </p>
+
+    <div class="line"></div>
+
+    <p class="original-text">
+      J'ai montré mon chef d'oeuvre aux grandes personnes et je leur ai demandé si mon dessin leur faisait peur.
+    </p>
+
+    <p class="original-text">
+      Elles m'ont répondu : "Pourquoi un chapeau ferait-il peur ?"
+    </p>
+
+    <p class="original-text">
+      Mon dessin ne représentait pas un chapeau. Il représentait un serpent boa qui digérait un éléphant. J'ai alors dessiné l'intérieur du serpent boa, afin que les grandes personnes puissent comprendre. Elles ont toujours besoin d'explications. Mon dessin numéro 2 était comme ça:
+    </p>
+
+    <img class="picture" src="elephant.jpg">
+
+    <div class="line"></div>
+
+  </div>
+
+
 
 </body>
 </html>
