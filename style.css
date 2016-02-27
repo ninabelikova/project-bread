@@ -5,7 +5,7 @@ html, body {
 }
 
 body {
-  font-family: "Roboto", sans-serif;;
+  font-family: "Roboto", sans-serif;
   text-align: center;
   color: #444;
 }
@@ -108,4 +108,10 @@ p {
   margin-right: auto;
   line-height: 2.3em;
   text-align: left;
+}
+
+@media screen and (max-width: 800px) {
+     #container {
+          width: 85%;
+     }
 }
