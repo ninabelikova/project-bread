@@ -42,7 +42,7 @@ p {
 }
 
 .explanation {
-  border-left: 3px red solid;
+  border-left: 3px solid red;
   padding-left: 1em;
   font-size: 1.2em;
 }
